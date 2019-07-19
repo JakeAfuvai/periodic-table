@@ -1,0 +1,120 @@
+.element {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 20pt);
+    grid-template-areas: 
+        "num am am"
+        ". sym ."
+        "name name name";
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.element-number, .element-atomic-mass, .element-name { 
+    font-size: 0.75em; 
+    color: rgba(255,255,255,0.4)
+}
+.element-number {
+    grid-area: num;
+}
+.element-atomic-mass {
+    grid-area: am;
+}
+.element-symbol {
+    grid-area: sym;
+    font-size: 1.5em;
+}
+.element-name {
+    grid-area: name;
+}
+.diatomic, .polyatomic, .metalloid, .post-transition, .transition, .alkali, .alkaline, .noble, .lanthanide, .actinide {
+    border-radius: 4pt;
+    transition: 0.3s;
+}
+.diatomic, .polyatomic {
+    background: rgba(255, 53, 94, 0.5);
+    border: 2pt solid rgba(255, 53, 94, 1);
+    color: rgba(255, 53, 94, 0.8);
+}
+.diatomic:hover, .polyatomic:hover {
+    background: rgba(255, 53, 94, 0.8); 
+}
+.metalloid {
+    background: rgba(255, 255, 102, 0.5);
+    border: 2pt solid rgba(255, 255, 102, 1);
+    color: rgba(255, 255, 102, 0.8);
+}
+.metalloid:hover {
+    background: rgba(255, 255, 102, 0.8);  
+}
+.post-transition {
+    background: rgba(255, 110, 255, 0.5);
+    border: 2pt solid rgba(255, 110, 255, 1);
+    color: rgba(255, 110, 255, 0.8);
+}
+.post-transition:hover {
+    background: rgba(255, 110, 255, 0.8);    
+}
+.transition {
+    background: rgba(102, 255, 102, 0.5);
+    border: 2pt solid rgba(102, 255, 102, 1);
+    color: rgba(102, 255, 102, 0.8);
+}
+.transition:hover {
+    background: rgba(102, 255, 102, 0.8);  
+}
+.alkali {
+    background: rgba(255, 153, 102, 0.5);
+    border: 2pt solid rgba(255, 153, 102, 1);
+    color: rgba(255, 153, 102, 0.8);
+}
+.alkali:hover {
+    background: rgba(255, 153, 102, 0.8); 
+}
+.alkaline {
+    background: rgba(170, 240, 209, 0.5);
+    border: 2pt solid rgba(170, 240, 209, 1);
+    color: rgba(170, 240, 209, 0.8);
+}
+.alkaline:hover {
+    background: rgba(170, 240, 209, 0.8);   
+}
+.noble {
+    background: rgba(204, 255, 0, 0.5);
+    border: 2pt solid rgba(204, 255, 0, 1);
+    color: rgba(204, 255, 0, 0.8);
+}
+.noble:hover {
+    background: rgba(204, 255, 0, 0.8);   
+}
+.lanthanide {
+    background: rgba(80, 191, 230, 0.5);
+    border: 2pt solid rgba(80, 191, 230, 1);
+    color: rgba(80, 191, 230, 0.8);
+}
+.lanthanide:hover {
+    background: rgba(80, 191, 230, 0.8);   
+}
+.actinide {
+    background: rgba(255, 0, 204, 0.5);
+    border: 2pt solid rgba(255, 0, 204, 1);
+    color: rgba(255, 0, 204, 0.8);
+}
+.actinide:hover{
+    background: rgba(255, 0, 204, 0.8);   
+}
+.diatomic:hover, .polyatomic:hover, .metalloid:hover, .post-transition:hover, .transition:hover, .alkali:hover, .alkaline:hover, .noble:hover, .lanthanide:hover, .actinide:hover {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+@media (max-width: 1575px) {
+    .element-atomic-mass, .element-name {
+        font-size: 0.5em;
+    }
+}
+@media (max-width: 1200px) {
+    .element-atomic-mass, .element-name {
+        display: none;
+    }
+}
